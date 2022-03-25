@@ -85,7 +85,7 @@ class FrontendController extends Controller
                 'pin' => $request->pin,
                 'gender' => $request->gender,
                 'dob' => $request->dob,
-                'image' =>  $request->image->store('Profile', 'public'),
+                'image' =>  $request->image->store('Profile'),
             ]);
         }else{
             User::where('id', Auth::user()->id)->update([

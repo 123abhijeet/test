@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontendController::class, 'home'])->name('HOME');
-Route::get('/profile', [FrontendController::class, 'profile'])->name('Profile');
+Route::get('/userprofile', [FrontendController::class, 'profile'])->name('Profile');
 Route::post('/update-profile',[FrontendController::class,'updateprofile'])->name('Update-Profile');
 Route::get('/about', [FrontendController::class, 'about'])->name('About');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('Contact');

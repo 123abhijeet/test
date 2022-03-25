@@ -21,7 +21,7 @@
                 <div class="profile-card">
                     <figure class="profile-card-img">
                         @if(!empty($user->image))
-                        <img src="{{asset('storage/'.$user->image)}}" alt="">
+                        <img src="{{asset($user->image)}}" alt="">
                         @else
                         <img src="{{asset('frontend/images/profile_image.jpg')}}" alt="">
                         @endif
