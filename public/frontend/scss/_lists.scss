@@ -1,0 +1,394 @@
+
+.pricing-heading {
+    display: flex;
+    h4 {
+        margin-bottom: 20px;
+
+        @include macbook{
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include windows-laptop{
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include tab-landscape{
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include tab-sm-portrait{
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+    }
+
+}
+
+.pricing-card-row{    
+    border: 1px solid $border-color;
+    box-shadow: 0px 4px 20px rgba(48, 57, 72, 0.06);
+    border-radius: 6px;
+    margin-bottom: 22px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.contact-heading{
+    width: 200px;
+    padding: 0 24px;
+    flex: none;
+    text-align: center;
+    
+    @include macbook{
+        width: 170px;
+    }
+
+    @include windows-laptop{
+        width: 170px;
+    }
+
+    @include tab-landscape{
+        width: 160px;
+        padding: 0 16px;
+    }
+}
+
+.contact-name-hdng{
+    width: 260px;
+    text-align: left;
+
+    @include macbook{
+        width: 220px;
+    }
+
+    @include windows-laptop{
+        width: 220px;
+    }
+
+    @include tab-landscape{
+        width: 200px;
+    }
+
+    @include tab-portrait{
+        width: 100%;
+        flex: auto;
+    }
+}
+
+.contact-address-hdng{
+    width: 100%;
+    flex: auto;
+    text-align: left;
+
+    @include tab-portrait{
+        display: none;
+    }
+}
+
+.contact-pin-hdng{
+    width: 170px;
+
+    @include macbook{
+        width: 150px;
+    }
+
+    @include windows-laptop{
+        width: 150px;
+    }
+
+    @include tab-landscape{
+        width: 130px;
+    }
+
+    @include tab-portrait{
+        display: none;
+    }
+}
+
+.contact-status-hdng{
+    @include tab-portrait{
+        display: none;
+    }
+}
+
+.contact-no-hdng{
+    @include mobile-lg{
+        display: none;
+    }
+}
+
+.contact-no-sm-device{
+    display: none;
+
+    @include mobile-lg{
+        display: block;
+    }
+}
+
+
+.pricing-card {
+    display: flex;
+
+    .pricing-card-item{
+        padding: 20px 24px;
+
+        @include tab-landscape{
+            padding: 20px;
+        }
+    }
+
+    .contact-name {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid $border-color;
+        width: 260px;
+        flex: none;
+        position: relative;
+
+        @include macbook{
+            width: 220px;
+        }
+
+        @include windows-laptop{
+            width: 220px;
+        }
+
+        @include tab-landscape{
+            width: 200px;
+        }
+
+        @include tab-portrait{
+            flex: auto;
+            width: 100%;
+        }
+
+        @include tab-sm-portrait{
+            padding: 16px 10px;
+        }
+
+        @include mobile-lg{
+            padding: 16px 20px;
+            border: 0;
+        }
+
+        h4{
+            margin: 0;
+
+            @include tab-landscape{
+                font-size: 16px;
+            }
+
+            @include tab-sm-portrait{
+                font-size: 15px;
+            }
+
+            @include mobile-lg{
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .contact-address {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid $border-color;
+        width: 100%;
+
+        @include tab-portrait{
+            display: none;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    .contact-pin {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid $border-color;
+        justify-content: center;
+        width: 170px;
+        flex: none;
+
+        @include macbook{
+            width: 150px;
+        }
+
+        @include windows-laptop{
+            width: 150px;
+        }
+
+        @include tab-landscape{
+            width: 130px;
+        }
+
+        @include tab-portrait{
+            display: none;
+        }
+
+        span{            
+            display: inline-block;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 600;
+            font-family: $primary-font;
+            letter-spacing: -0.015em;
+            color: #32373c;
+
+            @include tab-landscape{
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    .contact-no {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid $border-color;
+        width: 200px;        
+
+        @include macbook{
+            width: 170px;
+        }
+
+        @include windows-laptop{
+            width: 170px;
+        }
+
+        @include tab-landscape{
+            width: 160px;
+        }
+
+        @include tab-portrait{
+            border-right: 0;
+        }
+
+        @include mobile-lg{
+            display: none;
+        }
+
+
+        span {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 600;
+            font-family: $primary-font;
+            letter-spacing: -0.015em;
+            color: #32373c;
+            @include tab-landscape{
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    .contact-status{
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+
+        @include macbook{
+            width: 170px;
+        }
+
+        @include windows-laptop{
+            width: 170px;
+        }
+
+        @include tab-landscape{
+            width: 160px;
+        }
+
+        @include tab-portrait{
+            display: none;
+        }
+
+        span{
+            display: inline-block;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 600;
+            font-family: $primary-font;
+            letter-spacing: -0.015em;
+            color: #32373c;
+            @include tab-landscape{
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+
+
+}
+
+.description-collapse-btn{
+    display: none;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(../images/select-caret-down.svg) no-repeat center 11px / 10px;
+    border: 1px solid $border-color;
+    flex: none;
+    margin-right: 20px;
+
+    @include tab-portrait{
+        display: flex;
+    }
+
+    @include tab-sm-portrait{
+        height: 26px;
+        width: 26px;
+        background: url(../images/select-caret-down.svg) no-repeat center 9px/10px;
+        margin-right: 12px;
+    }
+
+    @include mobile-lg{
+        order: 1;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    &[aria-expanded="true"]{
+        background: url(../images/select-caret-up.svg) no-repeat center 9px/10px;
+    }
+
+}
+
+.contact-address-mobile{
+    padding: 20px;
+    border-top: 1px solid $border-color;
+
+    h4{
+
+        @include mobile-lg{
+            font-size: 16px;
+        }
+        span{
+            color: #32373c;
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+

@@ -1,0 +1,106 @@
+
+
+.blog-card-row{
+    margin-bottom: -40px;
+}
+
+.blog-card{
+    margin-bottom: 40px;
+    background: #FFFFFF;
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.05));
+    border-radius: 6px;
+}
+
+
+.blog-card-img{
+
+    img{
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+
+    }
+}
+
+.blog-card-info{
+    padding: 20px 24px 24px;
+    
+
+    h3{
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+        
+        a{
+            color: #363636;
+        }
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+    
+}
+
+.blog-post-info{
+    margin-bottom: 20px;
+
+    ul{
+        @include lists;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;    
+        column-gap: 20px;
+        row-gap: 10px;
+
+        li{
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+
+            a{
+                
+                position: relative;
+                color: $content-color;
+            }
+
+            &.blog-post-date{
+
+                a{
+                    padding-left: 26px;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 2px;
+                        left: 0;
+                        height: 14px;
+                        width: 14px;
+                        background: url(../images/blog-calendar-icon.svg)no-repeat center / contain  ;
+    
+                    }
+                }
+            }
+
+            &.blog-post-user{
+
+                a{
+                    padding-left: 26px;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 2px;
+                        left: 0;
+                        height: 14px;
+                        width: 14px;
+                        background: url(../images/blog-user-icon.svg)no-repeat center / contain  ;
+    
+                    }
+                }
+            }
+        }
+    }
+}

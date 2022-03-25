@@ -1,0 +1,185 @@
+@mixin heading {
+    font-weight: 700;  
+    font-family: $secondary-font;
+    letter-spacing: -0.02em;
+    color: $heading-color;
+    margin: 0 0 12px 0;
+    padding: 0;
+    position: relative;
+}
+
+@mixin button {
+    height: 48px;
+    line-height: 46px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 0 20px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.3s all;
+    position: relative;
+    white-space: nowrap;
+    background: $primary-color;
+    border: 1px solid transparent;
+    z-index: 2;
+}
+
+::placeholder {
+    color: $content-color;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: $content-color;
+}
+
+::-ms-input-placeholder {
+    color: $content-color;
+}
+
+@mixin input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid $border-color;
+    background: $input-bg-color;
+    padding: 0 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    color: $content-color;
+    transition: 0.3s ease-in-out;
+    outline: none;
+    position: relative;
+
+    @include macbook {
+      height: 46px;
+    }
+
+    @include windows-laptop {
+      height: 46px;
+    }
+
+    @include mobile-lg {
+      height: 44px;
+    }
+}
+
+@mixin lists {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        margin-bottom: 0px;
+    }
+}
+
+@mixin input-focus {
+    color: black !important;
+}
+
+@mixin transitionEffect {
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+@mixin monitor-lg {
+    @media all and #{$monitor-lg} {
+        @content;
+    }
+}
+
+@mixin desktop-lg {
+  @media all and #{$desktop-lg} {
+    @content;
+  }
+}
+
+@mixin hd-display {
+  @media all and #{$hd-display} {
+    @content;
+  }
+}
+
+@mixin macbook {
+  @media all and #{$macbook} {
+    @content;
+  }
+}
+
+@mixin windows-laptop {
+  @media all and #{$windows-laptop} {
+    @content;
+  }
+}
+
+@mixin tab-lg {
+  @media all and #{$tab-lg} {
+    @content;
+  }
+}
+
+@mixin tab-landscape {
+  @media all and #{$tab-landscape} {
+    @content;
+  }
+}
+
+@mixin tab-lg-portrait {
+  @media all and #{$tab-lg-portrait} {
+    @content;
+  }
+}
+
+@mixin tab-portrait {
+  @media all and #{$tab-portrait} {
+    @content;
+  }
+}
+
+@mixin tab-sm-portrait {
+  @media all and #{$tab-sm-portrait} {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media all and #{$mobile-lg} {
+    @content;
+  }
+}
+
+@mixin mobile-sm-portrait {
+  @media all and #{$mobile-sm-portrait} {
+    @content;
+  }
+}
+
+@mixin iphone-old {
+  @media all and #{$iphone-old} {
+    @content;
+  }
+}
+
+@mixin android-mobile {
+  @media all and #{$android-mobile} {
+    @content;
+  }
+}
+
+@mixin iphone-vs {
+  @media all and #{$iphone-vs} {
+    @content;
+  }
+}

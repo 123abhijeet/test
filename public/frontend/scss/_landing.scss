@@ -1,0 +1,666 @@
+
+.section-heading{
+    margin-bottom: 40px;
+
+    h2{
+        margin-bottom: 6px;
+    }
+
+    p{
+        color: rgba($color: $content-color, $alpha: 0.7);
+    }
+}
+
+.light-bg {
+    background: $light-bg;
+}
+
+
+.gradient-bg{
+    background: $gradient-bg;
+
+    h1, h2, h3, h4, h5, h6{
+        color: white;
+    }
+    p, ul li{
+        color: rgba($color: white, $alpha: 0.7);
+    }
+}
+
+
+.dark-bg {
+    background: $dark-bg;
+
+    h1, h2, h3, h4, h5, h6{
+        color: white;
+    }
+    p, ul li{
+        color: rgba($color: white, $alpha: 0.7);
+    }
+}
+
+
+
+
+
+.hero-card {
+    position: relative;
+    height: 540px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($color: #000000, $alpha: 0.7);
+    }
+}
+
+.hero-info {
+    max-width: 660px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    @include tab-landscape{
+        // max-width: 700px;
+    }
+
+    @include tab-portrait {
+        max-width: 560px;
+    }
+
+    h1, h2 {
+        font-size: 46px;
+        line-height: 122%;
+        letter-spacing: -0.02em;
+        color: white;
+        margin-bottom: 18px;
+
+        @include tab-landscape{
+            font-size: 40px;
+        }
+
+        @include tab-portrait{
+            font-size: 36px;
+        }
+
+        @include mobile-lg{
+            font-size: 30px;
+        }
+    }
+
+
+    p {
+        font-size: 20px;
+        line-height: 35px;
+        color: rgba($color: #ffffff, $alpha: 0.7);
+        margin-bottom: 40px;
+
+        
+        @include tab-landscape {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+
+        @include tab-portrait {
+            font-size: 17px;
+            line-height: 30px;
+        }
+
+        @include mobile-lg {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 20px;
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+// =========== Hero Section End ================ //
+
+.video-block-1{
+    align-items: center;
+
+    .video-block-video{
+        @include tab-landscape{
+            max-width: 600px;
+        }
+
+        @include tab-portrait{
+            max-width: 500px;
+        }
+
+        @include tab-sm-portrait{
+            max-width: 100%;
+        }
+
+        iframe{
+            border-radius: 6px;
+        }
+    }
+
+    .video-block-img{
+        @include tab-landscape{
+            max-width: 600px;
+        }
+
+        @include tab-portrait{
+            max-width: 500px;
+        }
+
+        @include tab-sm-portrait{
+            max-width: 100%;
+        }
+
+        img{
+            border-radius: 6px;
+        }
+    }
+
+}
+
+.video-block-info{
+    margin-left: 70px;
+
+    @include macbook{
+        margin-left: 50px;
+    }
+
+    @include windows-laptop{
+        margin-left: 50px;
+    }
+
+    @include tab-landscape{
+        margin-left: 0;
+        margin-right: 0 !important; 
+        margin-top: 50px;
+    }
+
+    @include tab-portrait{
+        margin-top: 30px;
+    }
+
+    h2{
+        margin-bottom: 16px;
+    }
+
+    ul{
+        @include lists;
+        margin-bottom: 20px;
+
+        li{
+            padding-left: 42px;
+            margin-bottom: 12px;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 1px;
+                height: 26px;
+                width: 26px;
+                background: url(../images/video-block-check.svg) no-repeat center / contain;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .btn{
+        margin-top: 20px;
+
+        @include mobile-lg{
+            margin-top: 10px;
+        }
+    }
+}
+
+.video-block-order{
+    .video-block-info{
+        margin-left: 0px;
+        margin-right: 70px;
+
+        @include macbook{
+            margin-right: 50px;
+        }
+
+        @include windows-laptop{
+            margin-right: 50px;
+        }
+    }
+}
+
+.video-block-btns{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: -20px;
+
+    @include mobile-lg{
+        margin-top: 10px;
+    }
+
+    .btn{
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-right: 26px;
+
+        @include mobile-lg{
+            margin-right: 16px;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+
+/////////////////////////////////////@at-root
+
+.checklist-style-1-row{
+    margin-bottom: -40px;
+}
+
+.checklist-style-1{
+    margin-bottom: 40px;
+    h3{
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    ul{
+        @include lists;
+        margin-bottom: 20px;
+
+        li{
+            padding-left: 42px;
+            margin-bottom: 12px;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 1px;
+                height: 26px;
+                width: 26px;
+                background: url(../images/video-block-check.svg) no-repeat center / contain;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+/////////////////////////////////////@at-root
+
+
+.testimonial-card {
+    background: white;
+    border: 1px solid $border-color;
+    padding: 40px;
+    border-radius: 4px;
+  
+    @include macbook{
+        padding: 30px;
+    }
+
+    @include windows-laptop{
+        padding: 30px;
+    }
+
+    @include tab-landscape {
+        padding: 30px;
+    }
+
+    @include mobile-lg{
+        padding: 20px;
+    }
+
+}
+
+.testimonial-card-body{
+    padding-bottom: 26px;
+    border-bottom: 1px solid $border-color;
+
+    @include mobile-lg{
+        padding-bottom: 20px;
+    }
+
+    p {
+        color: $content-color !important;
+    }
+}
+  
+.testimonial-card-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 26px;
+
+    @include mobile-lg{
+        padding-top: 20px;
+    }
+
+    figure {
+        flex: none;
+        height: 52px;
+        width: 52px;
+        margin-right: 14px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    .user-name {
+        h4 {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+            font-family: $primary-font;
+            letter-spacing: -0.015em;
+            color: $heading-color;
+            margin-bottom: 10px;
+
+            @include mobile-lg{
+                font-size: 17px;
+                line-height: 20px;
+            }
+        }
+
+        p {
+            line-height: 19px;
+            color: rgba($color: #000, $alpha: 0.6);
+        }
+    }
+}
+   
+.swiper-pagination {
+    position: initial;
+    line-height: 0;
+    padding-top: 40px;
+    
+    @include mobile-lg{
+        padding-top: 30px;
+    }
+
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+        background: $border-color;
+        backdrop-filter: blur(63px);
+        opacity: 1;
+
+        &-active{
+            background: $content-color;
+        }
+    }
+
+}
+
+
+////////////////////////////////////@at-root
+
+.app-ss-buttons{
+    display: flex;
+
+    @include tab-portrait{
+        justify-content: center;
+    }
+
+
+    .swiper-button{
+        position: initial;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba($color: $primary-color, $alpha: 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        margin-right: 16px;
+
+        svg{
+            path{
+                transition: 0.3s all;
+            }
+        }
+
+        &:hover{
+            background: $primary-color;
+
+            svg{
+                path{
+                    stroke:white;
+                }
+            }
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.app-ss-content-wrapper{
+    display: flex;
+    align-items: center;
+
+    @include tab-portrait{
+        flex-direction: column;
+    }
+}
+
+.app-ss-info{
+    width: 420px;
+    margin-right: 50px;
+    flex: none;
+    position: relative;
+    z-index: 1;
+
+    @include macbook{
+        width: 400px;
+    }
+
+    @include windows-laptop{
+        width: 400px;
+    }
+
+    @include tab-landscape{
+        width: 330px;
+    }
+
+    @include tab-portrait{
+        width: 85%;
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+   
+}
+
+.app-ss-swiper{
+    position: relative;
+
+    @include mobile-lg{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+
+    .swiper-slide{
+        width: 380px;
+
+        @include macbook{
+            width: 300px;
+        }
+
+        @include windows-laptop{
+            width: 300px;
+        }
+
+        @include tab-landscape{
+            width: 300px;
+        }
+
+        @include tab-portrait{
+            width: 240px;
+        }
+
+        figure{
+            margin-left: -30px;
+            margin-right: -30px;
+            
+            @include tab-portrait{
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+
+        }
+      
+    }
+}
+
+
+
+  
+////////////////////////////////////@at-root
+
+
+
+.cta-center-content{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 335px;
+
+    @include mobile-lg{
+        height: 500px;
+    }
+}
+
+.cta-center-bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba($color: #000, $alpha: 0.7);
+    }
+
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+}
+
+.cta-center-info{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 660px;
+
+    @include tab-sm-portrait{
+        max-width: 85%;
+    }
+
+    h2{
+        color: white;
+        margin-bottom: 6px;
+    }
+
+    p{
+        color: rgba($color: white, $alpha: 0.7);
+    }
+
+    .cta-center-btns{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile-lg{
+            padding-top: 10px;
+            flex-direction: column;
+        }
+
+        .app-store-btn{
+            width: 180px;
+            margin-right: 26px;
+
+            @include tab-landscape{
+                margin-right: 20px;
+            }
+
+            @include mobile-lg{
+                display: block;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            img{
+                width: 100%;
+            }
+
+            &:last-child{
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

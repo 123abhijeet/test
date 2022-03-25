@@ -1,0 +1,40 @@
+// responsive devices
+
+$desktop-lg: "(min-width: 1920px)";
+$macbook: "(min-width: 1367px) and (max-width: 1600px)";
+$windows-laptop: "(min-width: 1201px) and (max-width: 1366px)";
+$tab-lg: "(min-width: 1201px) and (max-width: 1366px) and (min-height: 880px)";
+$tab-landscape: "(max-width: 1200px)";
+$tab-lg-portrait: "(min-width: 1024px) and (max-width: 1200px) and (orientation: portrait)";
+$tab-portrait: "(max-width: 991px)";
+$tab-sm-portrait: "(max-width: 767px)";
+$mobile-lg: "(max-width: 575px)";
+$mobile-sm-portrait: "(max-width: 410px)";
+$iphone-old: "(max-width: 410px) and (max-height: 667px)";
+$android-mobile: "(max-width: 360px)";
+$iphone-vs: "(max-width: 320px)";
+
+// ============ Fonts Variable ============ //
+
+$primary-font: "Inter", sans-serif;
+$secondary-font: "Inter", sans-serif;
+// $secondary-font: "Manrope", sans-serif;
+
+// ============ Color Variable ============ //
+
+$primary-color: #922B1F;
+$secondary-color: #000;
+
+$heading-color: #922B1F;
+$content-color: #57616A;
+$gray-color:#7A7B86;
+
+$dark-bg: #303948;
+$light-bg: #f7f8f9;
+$gradient-bg: linear-gradient(248.09deg, #183275 -1.48%, #0D6AB8 100.93%);
+
+$border-color: #eaebed;
+
+// $dark-text:#1A1F4A;
+$input-bg-color: white;
+$input-border-color: #e8e8e8;

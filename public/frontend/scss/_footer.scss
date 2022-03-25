@@ -1,0 +1,99 @@
+.footer {
+    background: black;
+}
+
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0 20px;
+
+    @include tab-portrait{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba($color: #ffffff, $alpha: 0.6);
+
+        a{
+            color: rgba($color: #ffffff, $alpha: 0.6);
+            
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+   
+}
+
+.footer-copyright{
+    @include tab-portrait{
+        text-align: center;
+    }
+}
+
+.footer-legal{
+    order: 1;
+
+    @include mobile-lg{
+        order: 0;
+    }
+
+    ul{
+        @include lists;
+        display: flex;
+       
+        li{
+            line-height: 0;
+            padding: 0 10px;
+
+            &::after{
+                content: "";
+                position: absolute;
+                right: -1px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2px;
+                height: 17px;
+                background: rgba($color: #ffffff, $alpha: 0.6);
+            }
+
+            a{
+                font-size: 14px;
+                line-height: 17px;
+                color: rgba($color: #ffffff, $alpha: 0.6);
+
+                &:hover{
+                    color: white;
+                }
+            }
+
+            &:first-child{
+                padding-left: 0;
+            }
+
+            &:last-child{
+                padding-right: 0;
+
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+.webpop-logo{
+    width: 25px;
+
+    img{
+        width: 25px;
+    }
+}

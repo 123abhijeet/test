@@ -1,0 +1,581 @@
+.btn {
+  @include button;
+
+  
+    @include mobile-lg{
+        height: 44px;
+        line-height: 42px;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 0 16px;
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        top: 1px;
+        height: 12px;
+        width: 8px;
+        background: url(../images/btn-arrow-white.svg) no-repeat center / contain;
+        margin-left: 14px;
+        transition: 0.3s all;
+    }
+
+    &:hover {
+        color: white;
+        background: $secondary-color;
+
+        &::after{            
+            transition: 0.3s all;
+        }
+    }
+
+    &:focus {
+        color: white;
+        background: $secondary-color;
+        box-shadow: none;
+    }
+
+    &-secondary {
+        background: $secondary-color;
+
+        &:hover {
+            background: $primary-color;
+            border-color: transparent;
+        }
+
+        &:focus {
+            background: $primary-color;
+            border-color: transparent;
+        }
+    }
+  
+    &-link {
+        line-height: 19px;
+        padding: 0;
+        color: black;
+        height: 16px;
+        border: none;
+        background: none;
+        text-decoration: none;
+
+        &::after {
+            background: url(../images/btn-arrow-black.svg) no-repeat center / contain;
+        }
+
+        &:hover {
+            background: none;
+            color: $secondary-color;
+
+            &::after {
+                content: "";
+                background: url(../images/btn-arrow-black.svg)  no-repeat center / contain;
+            }
+        }
+
+        &:focus {
+            background: none;
+            color: $secondary-color;
+
+            &::after {
+                content: "";
+                background: url(../images/btn-arrow-orange.svg)  no-repeat center / contain;
+            }
+        }
+    }
+
+    &-white {
+        background: white;
+        color: $primary-color;
+
+        &::after {
+            background: url(../images/btn-arrow-blue.svg) no-repeat center / contain;
+        }
+
+        &:hover {
+            color: white;
+            background: $secondary-color;
+
+            &::after {
+                background: url(../images/btn-arrow-white.svg) no-repeat center / contain;
+            }
+        }
+
+        &:focus {
+            color: white;
+            background: $secondary-color;
+
+            &::after {
+                background: url(../images/btn-arrow-white.svg) no-repeat center / contain;
+            }
+        }
+    }
+
+    &-dark {
+        background: $dark-bg;
+        color: white;
+
+        &::after {
+            background: url(../images/btn-arrow-white.svg) no-repeat center / contain;
+        }
+
+        &:hover {
+            color: white;
+            background: $primary-color;
+            border-color: transparent;
+
+            &::after {
+                background: url(../images/btn-arrow-white.svg) no-repeat center / contain;
+            }
+        }
+
+        &:focus {
+            color: white;
+            background: $secondary-color;
+            border-color: transparent;
+
+            &::after {
+                background: url(../images/btn-arrow-white.svg) no-repeat center / contain;
+            }
+        }
+    }
+
+    &-stroke-white {
+        background: transparent;
+        border-color: white;
+
+        &:hover{
+            background: $primary-color;
+            border-color: $primary-color;
+        }
+
+        &:focus{
+            background: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+    &-stroke-dark {
+        background: transparent;
+        color: black;
+        border-color: black;
+
+        &::after{
+            background: url(../images/btn-arrow-black.svg) no-repeat center / contain;
+        }
+
+        &:hover{
+            background: white;
+            border-color: $primary-color;
+            color: $primary-color;
+                
+            &::after{
+                background: url(../images/btn-arrow-red.svg) no-repeat center / contain;
+            }
+        }
+
+        &:focus{
+            background: white;
+            border-color: white;
+            color: $primary-color;
+                
+            &::after{
+                background: url(../images/btn-arrow-blue.svg) no-repeat center / contain;
+            }
+        }
+    }
+
+    &-load-more {
+        background: $dark-bg;
+
+        &::after{
+            transform: rotate(90deg);
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &-add-to-cart{
+        font-size: 16px;
+        height: 40px;
+        line-height: 38px;
+
+        &::after{
+            display: none;
+        }
+
+        &::before{
+            content: "";
+            display: inline-block;
+            position: relative;
+            top: 2px;
+            height: 17px;
+            width: 18px;
+            background: url(../images/btn-cart-icon.svg) no-repeat center / contain;
+            margin-right: 10px;
+            transition: 0.3s all;
+        }
+    }
+      
+    &-signin{
+        height: 35px;
+        line-height: 33px;
+        font-weight: 500;
+        font-family: $secondary-font;    
+        padding: 0 14px;
+
+        @include tab-landscape{
+            height: 40px;
+            line-height: 38px;
+        }
+
+        @include mobile-lg{
+            height: 44px;
+            line-height: 42px;
+        }
+
+        &::before{
+            content: "";
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            margin-right: 7px;
+            background: url(../images/user-icon.svg) no-repeat center / contain ;
+            position: relative;
+            top: 1px;
+        }
+
+        &::after{
+            display: none;
+        }
+    }
+
+    &-call{
+
+        &::before{
+            content: "";
+            display: inline-block;
+            height: 18px;
+            width: 18px;
+            background: url(../images/phone-icon-white.svg) no-repeat center / contain;
+            margin-right: 12px;
+            position: relative;
+            top: 4px;
+        }
+        &::after{
+            display: none;
+        }
+    }
+
+    &-no-icon{
+        &::after{
+            display: none;
+        }
+
+        &::before{
+            display: none;
+        }
+    }
+
+    &-sm{
+        height: 40px;
+        line-height: 38px;
+        font-size: 15px;
+        padding: 0 18px;
+
+        &::after{
+            width: 7px;
+            height: 11px;
+        }
+    }
+}
+
+.button {
+    @extend .btn;
+    background: $primary-color url(../images/btn-arrow-white.svg) no-repeat;
+    background-position: right 20px center;
+    padding-right: 41px;
+
+    &::before {
+        display: none;
+    }
+
+    &::after {
+        display: none;
+    }
+
+    &:hover {
+        background: $secondary-color url(../images/btn-arrow-white.svg) no-repeat;
+        background-position: right 20px center;
+        padding-right: 41px;
+    }
+
+    &:focus {
+        background: $secondary-color url(../images/btn-arrow-white.svg) no-repeat;
+        background-position: right 20px center;
+        padding-right: 41px;
+    }
+}
+
+.gform_previous_button {
+    background: $dark-bg url(../images/btn-arrow-white-left.svg) no-repeat left 20px center !important;
+    color: white !important;
+    padding: 0 20px 0 41px !important;
+
+    &:hover {
+        background: $secondary-color url(../images/btn-arrow-white-left.svg) no-repeat left 20px center !important;
+        color: white !important;
+        padding: 0 20px 0 41px !important;
+    }
+
+    &:focus {
+        background: $secondary-color url(../images/btn-arrow-white-left.svg) no-repeat left 20px center !important;
+        color: white !important;
+        padding: 0 20px 0 41px !important;
+    }
+}
+
+input[type="submit"] {
+    @extend .btn;
+    background: $primary-color url(../images/btn-arrow-white.svg) no-repeat;
+    background-position: right 20px center;
+    padding-right: 41px;
+
+    &:hover {
+        background: $secondary-color url(../images/btn-arrow-white.svg) no-repeat;
+        background-position: right 20px center;
+        padding-right: 41px;
+    }
+
+    &:focus {
+        background: $secondary-color url(../images/btn-arrow-white.svg) no-repeat;
+        background-position: right 20px center;
+        padding-right: 41px;
+    }
+}
+
+%input-styles {
+    @include input;
+}
+
+%input-styles--focus {
+    @include input-focus;
+}
+
+@mixin input-styles($styles, $focus_styles) {
+    $types: "email", "number", "select", "password", "search", "tel", "text",
+        "url", "color", "date", "datetime", "datetime-local", "month", "time",
+        "week";
+
+    @each $type in $types {
+        input[type="#{$type}"] {
+        @extend #{$styles};
+
+        &:focus {
+            @extend #{$focus_styles};
+            border: 1px solid $border-color !important;
+        }
+        }
+    }
+
+    select {
+        @extend #{$styles};
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url(../images/select-caret-down.svg);
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+
+        &:focus {
+            @extend #{$focus_styles};
+            border: 1px solid $border-color !important;
+        }
+    }
+
+    textarea {
+        @extend #{$styles};
+        height: 200px;
+        resize: none;
+        padding: 13px 20px;
+        border-color: $border-color !important;
+        border-radius: 4px !important;
+
+        &:focus {
+            @extend #{$focus_styles};
+            border-color: $border-color;
+        }
+    }
+}
+
+@include input-styles("%input-styles", "%input-styles--focus");
+
+// ===================== check and radio
+
+@mixin checbox {
+    appearance: none;
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: -9999px !important;
+
+    & + label {
+        padding: 0 0 0 30px !important;
+        color: $content-color !important;
+        display: inline-block !important;
+        max-width: inherit !important;
+        margin: 0px 12px 0 0 !important;
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        line-height: 16px !important;
+        font-family: $primary-font !important;
+        position: relative !important;
+        letter-spacing: 0 !important;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+    & + label:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: $border-color;
+        left: 0;
+        top: -2px;
+        border-radius: 0;
+    }
+
+    & + label:after {
+        content: "";
+        background: none !important;
+        position: absolute;
+        left: 7px;
+        top: 2px;
+        width: 5px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+        transform: rotate(50deg);
+        display: none;
+    }
+
+    &:checked + label {
+        color: $primary-color !important;
+        font-weight: 400 !important;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    &:checked + label:before {
+        background-color: $primary-color !important;
+        border-color: $primary-color;
+    }
+
+    &:checked + label:after {
+        display: block;
+    }
+}
+
+@mixin radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: -9999px !important;
+
+    & + label {
+        padding: 0 0 0 30px !important;
+        color: $content-color !important;
+        display: inline-block !important;
+        max-width: inherit !important;
+        margin: 0px 12px 0 0 !important;
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        font-family: $primary-font !important;
+        line-height: 19px !important;
+        position: relative !important;
+        letter-spacing: 0 !important;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+    & + label:before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $border-color;
+        left: 0;
+        top: 0px;
+        border-radius: 50%;
+    }
+
+    & + label:after {
+        content: "";
+        position: absolute;
+        width: 8.81px;
+        height: 8.81px;
+        background: $primary-color !important;
+        left: 4.6px;
+        top: 4.6px;
+        border-radius: 50%;
+        display: none;
+    }
+
+    &:checked + label {
+        font-weight: 400 !important;
+        user-select: none;
+    }
+
+    &:checked + label:before {
+        border-width: 6px !important;
+        border-color: $primary-color !important;
+    }
+
+    &:checked + label:after {
+        display: none;
+    }
+}
+
+input[type="checkbox"] {
+    @include checbox;
+}
+
+input[type="radio"] {
+    @include radio;
+}
+
+/////////////////////////////////////////////
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+
+    @include mobile-lg {
+        margin-bottom: 20px;
+    }
+
+    label {    
+        font-size: 16px !important;
+        line-height: 19px !important;
+        font-weight: 600 !important;
+        font-family: $primary-font !important;
+        letter-spacing: -0.02em !important;
+        text-transform: capitalize !important;
+        color: #000000 !important;
+        margin-bottom: 10px !important;
+
+        sup {
+        color: #ff2323;
+        top: -1px;
+        font-size: 14px;
+        }
+    }
+}
